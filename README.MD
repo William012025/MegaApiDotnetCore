@@ -1,3 +1,4 @@
+## Desafio para criar/melhorar o readme do curso DIO- Documentando Projetos Automáticos Utilizando IA. Professor Felipe Aguiar <br><br>
 <p align="center">
   <img src="./_docs/assets/icon.png" alt="Logo do Projeto" width="15%">
 </p>
