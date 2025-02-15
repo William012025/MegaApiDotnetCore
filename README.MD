@@ -1,150 +1,106 @@
-<h1 align="center">
-  <br />
-  <img
-    src="./_docs/assets/icon.png"
-    alt="Mega Man Robots API"
-    width="150"
-  />
-  <br />
-  <b>Mega Man Robots API</b>
-  <br />
-  <sub
-    ><sup><b>(MEGA-MAN-ROBOTS)</b></sup></sub
-  >
-  <br />
-  <a
-    href="https://github.com/felipeAguiarCode/MegaApiDotnetCore/actions/workflows/build.yml"
-  >
-    <img
-      src="https://github.com/felipeAguiarCode/MegaApiDotnetCore/actions/workflows/build.yml/badge.svg"
-      alt=""
-    />
-  </a>
-  <a href="https://github.com/felipeAguiarCode/MegaApiDotnetCore/releases/latest">
-    <img
-      src="https://img.shields.io/github/v/release/felipeAguiarCode/MegaApiDotnetCore"
-      alt="Latest Release"
-    />
-  </a>
-</h1>
-
 <p align="center">
-  This .NET Core API is designed to serve JSON formatted data about bosses from
-  the Mega Man series. It is a backend service built with .NET Core 3.1 and
-  various modern dependencies for data management and API response handling.
-  <br />
+  <img src="./_docs/assets/icon.png" alt="Logo do Projeto" width="15%">
 </p>
 
-<p align="center">
-  Developed with Entity Framework Core and other modern .NET technologies, this
-  project aims to provide a robust API for accessing Mega Man robot data.
-  <br />
-</p>
+<h1 align="center" style="font-size: 42px;"><b>MegaMan API</b></h1>
 
-<p align="center">
-  <br />
-  <img src="./_docs/assets/carbon.png" />
-</p>
 
-## API Endpoints
-
-<table align="center">
-  <tr>
-    <th>Method</th>
-    <th>Endpoint</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>/api/v1/robots</td>
-    <td>Returns a list of all robots</td>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>/api/v1/robots/{id}</td>
-    <td>Returns details of a specific robot by ID</td>
-  </tr>
-  <tr>
-    <td>POST</td>
-    <td>/api/v1/robots</td>
-    <td>Endpoint to create a new robot entry</td>
-  </tr>
+          
+[![.NET Core](https://img.shields.io/badge/.NET%20Core-3.1-blue)](https://dotnet.microsoft.com/en-us/)
+[![Entity Framework](https://img.shields.io/badge/Entity%20Framework-3.1.8-green)](https://docs.microsoft.com/en-us/ef/)
+[![Newtonsoft.Json](https://img.shields.io/badge/Newtonsoft.Json-12.0.2-orange)](https://www.newtonsoft.com/json)
+        </td>
+    </tr>
 </table>
 
-## Techniques Used
+## Sobre o projeto
 
-<p align="center">
-  - <b>Entity Framework Core:</b> ORM for data management.<br />
-  - <b>RESTful API Design:</b> Ensures clear and effective communication
-  endpoints.<br />
-  - <b>Dependency Injection:</b> Used throughout to promote loose coupling and
-  enhanced testability.<br />
-</p>
+A **Megaman API** é um backend desenvolvido em **.NET Core 3.1** para fornecer informações sobre os *bosses* da franquia **Megaman**.
 
-## Dependencies
+A API retorna dados em JSON no seguinte formato:
 
-<table align="center">
-  <tr>
-    <th>Package</th>
-    <th>Version</th>
-    <th>Link</th>
-  </tr>
-  <tr>
-    <td>Microsoft.EntityFrameworkCore</td>
-    <td>3.1.8</td>
-    <td>
-      <a
-        href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/3.1.8"
-        >NuGet</a
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>Microsoft.EntityFrameworkCore.Design</td>
-    <td>3.1.8</td>
-    <td>
-      <a
-        href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/3.1.8"
-        >NuGet</a
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>Microsoft.EntityFrameworkCore.SqlServer</td>
-    <td>3.1.8</td>
-    <td>
-      <a
-        href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/3.1.8"
-        >NuGet</a
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>Newtonsoft.Json</td>
-    <td>12.0.2</td>
-    <td>
-      <a href="https://www.nuget.org/packages/Newtonsoft.Json/12.0.2">NuGet</a>
-    </td>
-  </tr>
-</table>
-
-## :gear: Arch
-
-```🌐
-src
-├── 📂 Controllers      [Routes for endpoints]
-├── 📂 Models           [Database models]
-├── 📂 Services         [Business rules]
-├── 📂 Middlewares      [Intermediate functions between the HTTP request and the final server response]
-├── 📂 Database         [Structures related to the database]
-│   ├── 📂 DTOs             [Input Models and View Models (Data Transfer Objects)]
-│   ├── 📂 EntityFramework  [Files related to the ORM Entity Framework]
-│   │     ├── 📂 Context         [Entity context settings]
-│   │     ├── 📂 Migrations      [Migrations for database updates]
-│   ├── 📂 Repositories     [Repository pattern]
+```json
+{
+  "Id": 1,
+  "Code": "DLN/DRN-003",
+  "Name": "Cutman",
+  "HP": 150,
+  "Picture": "https://vignette.wikia.nocookie.net/megaman/images/2/22/Cutman.png"
+}
 ```
 
-## License This software is licensed under the terms of the [MIT]
+## Estrutura do projeto
 
-⌨️ FelipeAguiar -
-[Github](https://github.com/felipeAguiarCode)
+```
+📁 .vs/
+📁 .vscode/
+📁 bin/
+📁 Controllers/
+📁 Database/
+📁 middlewares/
+📁 Models/
+📁 obj/
+📁 Properties/
+📁 Services/
+📄 appsettings.Development.json
+📄 appsettings.json
+📄 global.json
+📄 MegamanApi.csproj
+📄 MegamanApi.sln
+📄 Program.cs
+📄 Startup.cs
+```
+
+## Endpoints
+
+| Método | Rota                 | Descrição                         |
+|--------|----------------------|---------------------------------|
+| GET    | /api/v1/robots       | Retorna todos os robôs        |
+| GET    | /api/v1/robots/{id}  | Retorna um robô pelo ID       |
+| POST   | /api/v1/robots       | Envia um novo robô            |
+
+## Tecnologias e Técnicas Utilizadas
+
+- **.NET Core 3.1** - Framework principal do projeto ([.NET Core](https://dotnet.microsoft.com/en-us/))
+- **Entity Framework Core 3.1.8** - ORM para gerenciar o banco de dados ([Entity Framework](https://docs.microsoft.com/en-us/ef/))
+- **ASP.NET Core Web API** - Para construir os endpoints ([ASP.NET Core](https://dotnet.microsoft.com/en-us/apps/aspnet))
+- **Newtonsoft.Json 12.0.2** - Biblioteca para manipulação de JSON ([Newtonsoft.Json](https://www.newtonsoft.com/json))
+
+## Dependências
+
+| Pacote | Versão | Link |
+|--------|--------|------|
+| Microsoft.EntityFrameworkCore | 3.1.8 | [Entity Framework](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/3.1.8) |
+| Microsoft.EntityFrameworkCore.Design | 3.1.8 | [EF Core Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/3.1.8) |
+| Microsoft.EntityFrameworkCore.SqlServer | 3.1.8 | [EF Core SQL Server](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/3.1.8) |
+| Newtonsoft.Json | 12.0.2 | [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/12.0.2) |
+
+## Como Rodar o Projeto
+
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/William012025/MegaApiDotnetCore
+   ```
+2. Navegue até o diretório do projeto:
+   ```sh
+   cd megaman-api
+   ```
+3. Restaure as dependências:
+   ```sh
+   dotnet restore
+   ```
+4. Inicie o servidor:
+   ```sh
+   dotnet run
+   ```
+
+Agora, a API estará disponível em `https://github.com/William012025/MegaApiDotnetCore`.
+
+## Licença
+
+Este projeto está licenciado sob os termos da licença [MIT](LICENSE).
+
+
+
+
+
